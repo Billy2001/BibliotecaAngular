@@ -1,0 +1,47 @@
+<div class="col-lg-12">
+    <h3>{{title}}</h3>
+    <div class="sidebar-min row mb-4" data-example-id="sample-nav-stacked">
+        <ul class="nav flex-column nav-pills nav-fill col-1 ">
+            <h5>Usuario</h5>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-info "[routerLink]="['UserList']">Listado</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-info"  [routerLink]="['UserAdd']">Agregar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-info"[routerLink]="['UserEdit']">Editar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-outline bg-info"[routerLink]="['UserDelete']">Eliminar</a>                
+            </li>
+            <br>
+            <h5>Libro</h5>           
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-warning"  [routerLink]="['LibroAdd']">Agregar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-warning"[routerLink]="['LibroEdit']">Editar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-outline bg-warning"[routerLink]="['LibroDelete']">Eliminar</a>                           
+            </li>
+            <br>
+            <h5>Revista</h5>           
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-dark"  [routerLink]="['RevistaAdd']">Agregar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-dark bg-dark"[routerLink]="['RevistaEdit']">Editar</a>                
+            </li>
+            <li role="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link active navbar-outline bg-dark"[routerLink]="['RevistaDelete']">Eliminar</a>                           
+            </li>
+        </ul>        
+        <div class="col-lg-10"><router-outlet></router-outlet></div>      
+    </div>    
+    
+</div>
+
+    
+

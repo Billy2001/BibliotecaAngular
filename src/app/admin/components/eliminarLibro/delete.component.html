@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<div class="col-lg-4">
+    <form (ngSubmit)="onSubmit()" #deleteLibroForm="ngForm" >       
+        <p>
+            <label>ID</label>
+            <input [(ngModel)]="libro._id" name="ID" #ID="ngModel" type="text" class="form-control" required/>            
+            <span *ngIf="!ID.valid && ID.touched" class="alert alert-danger" role="alert">
+                El ID es obligatorio
+            </span>
+        </p>
+        <button type="submit"class="btn btn-primary" style="cursor:pointer" [disabled]="!deleteLibroForm.form.valid" >{{title}}</button>
+    </form>
+    </div>

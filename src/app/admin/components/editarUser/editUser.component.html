@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<div class="col-lg-4">
+    <form (ngSubmit)="onSubmit()" #editUserForm="ngForm">
+        <p>
+            <label>Carnet/CUI</label>
+            <input [(ngModel)]="user.carnet_CUI" name="carnet_CUI" #carnet_CUI="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!carnet_CUI.valid && carnet_CUI.touched" class="alert alert-danger" role="alert">
+                El carnet o el CUI es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Usuario</label>
+            <input [(ngModel)]="user.usuario" name="usuario" #usuario="ngModel"type="text" class="form-control" required>
+            <span *ngIf="!usuario.valid && usuario.touched" class="alert alert-danger" role="alert">
+                El usuario es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Nombre</label>
+            <input [(ngModel)]="user.nombre" name="nombre" #nombre="ngModel" type="text" class="form-control" required>
+            <span *ngIf="!nombre.valid && nombre.touched" class="alert alert-danger" role="alert">
+                El nombre es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Apellido</label>
+            <input [(ngModel)]="user.apellido" name="apellido" #apellido="ngModel" type="text" class="form-control" required>
+            <span *ngIf="!apellido.valid && apellido.touched" class="alert alert-danger" role="alert">
+                El apellido es obligatorio
+            </span>
+        </p>                
+        <p>
+            <label>Contraseña</label>
+            <input [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control" required>
+            <span *ngIf="!usuario.valid && usuario.touched" class="alert alert-danger" role="alert">
+                La password es obligatorio
+            </span>
+        </p>
+        <button type="submit"class="btn btn-primary" style="cursor:pointer" [disabled]="!editUserForm.form.valid" >{{title}}</button>
+    </form>
+    </div>

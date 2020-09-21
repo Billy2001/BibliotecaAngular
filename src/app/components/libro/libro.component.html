@@ -1,0 +1,72 @@
+<div class="col-lg-12">
+    <h1>{{title}}</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Autor</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Edición</th>
+                <th scope="col">Palabras Clave</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Temas</th>
+                <th scope="col">Copias</th>
+                <th scope="col">Disponibles</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                    <td>Paulo Coelho</td>
+                    <td>El Alquimista</td>
+                    <td>1er edición</td>
+                    <td>Es una novela critica</td>
+                    <td>Es una obra fantástica que nos deja grandes enseñanzas y nos impulsa a luchar por nuestros mas grandes sueños y a no tenerle miedo a las adversidades que se nos presentan en nuestro camino</td>
+                    <td> Desarrollo y crecimiento personal</td>
+                    <td>10</td>
+                    <td>10</td>
+
+
+                    <td>
+                        <button type="button" class="btn btn-dark" style="cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter">
+                            <span class="fas fa-edit" arial-hidden="true"></span> Prestar
+                        </button>                                                                              
+                    </td>
+            </tr>
+            <tr >
+                <td>Tom Egeland</td>
+                <td>El Código da Vinci</td>
+                <td>1er edición</td>
+                <td>Es una novela de misterio</td>
+                <td>Al combinar los géneros de suspenso detectivesco y esoterismo Nueva Era, con una teoría de conspiración relativa al Santo Grial y al papel de María Magdalena en el cristianismo, la novela espoleó el difundido interés </td>
+                <td> Novela, Misterio, Thriller, Policial, Ficción detectivesca, ficción conspirativa</td>
+                <td>10</td>
+                <td>10</td>
+                <td>
+                    <button type="button" class="btn btn-dark" style="cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter">
+                        <span class="fas fa-edit" arial-hidden="true"></span> Prestar
+                    </button>                                                 
+                </td>
+        </tr>
+        
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Gracias por Prestar un libro.
+          Recuerda que no puedes prestar mas de 10 articulos!!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>

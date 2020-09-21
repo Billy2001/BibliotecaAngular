@@ -1,0 +1,63 @@
+<h1>{{title}}</h1>
+<div class="col-lg-4">
+    <form (ngSubmit)="onSubmit()" #EditLibroForm="ngForm" >
+        <p>
+            <label>Autor</label>
+            <input [(ngModel)]="libro.autor" name="autor" #autor="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!autor.valid && autor.touched" class="alert alert-danger" role="alert">
+                El autor es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Titulo</label>
+            <input [(ngModel)]="libro.titulo" name="titulo" #titulo="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!titulo.valid && titulo.touched" class="alert alert-danger" role="alert">
+                El titulo es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Edición</label>
+            <input [(ngModel)]="libro.edicion" name="edicion" #edicion="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!edicion.valid && edicion.touched" class="alert alert-danger" role="alert">
+                La edicion es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Palabras Clave</label>
+            <input [(ngModel)]="libro.palabrasClave" name="palabrasClave" #palabrasClave="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!palabrasClave.valid && palabrasClave.touched" class="alert alert-danger" role="alert">
+                Las Palabras Clave son obligatorias
+            </span>
+        </p>
+        <p>
+            <label>Descripción</label>
+            <input [(ngModel)]="libro.descripcion" name="descripcion" #descripcion="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!descripcion.valid && descripcion.touched" class="alert alert-danger" role="alert">
+                La descripcion es obligatorio
+            </span>
+        </p>
+        <p>
+            <label>Temas</label>
+            <input [(ngModel)]="libro.temas" name="temas" #temas="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!temas.valid && temas.touched" class="alert alert-danger" role="alert">
+                Los temas son obligatorios
+            </span>
+        </p>
+        <p>
+            <label>Copias</label>
+            <input [(ngModel)]="libro.copias" name="copias" #copias="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!copias.valid && copias.touched" class="alert alert-danger" role="alert">
+                Las copias son obligatorias
+            </span>
+        </p>
+        <p>
+            <label>Disponibles</label>
+            <input [(ngModel)]="libro.disponibles" name="disponibles" #disponibles="ngModel"type="text" class="form-control" required/>            
+            <span *ngIf="!disponibles.valid && disponibles.touched" class="alert alert-danger" role="alert">
+                Los disponibles son obligatorios
+            </span>
+        </p>
+        
+        <button type="submit"class="btn btn-primary" style="cursor:pointer" [disabled]="!EditLibroForm.form.valid" >Agregar{{title}}</button>
+    </form>
+    </div>

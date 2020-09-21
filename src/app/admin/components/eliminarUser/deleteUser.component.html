@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<div class="col-lg-4">
+    <form (ngSubmit)="onSubmit()" #deleteUserForm="ngForm" >       
+        <p>
+            <label>Carnet/CUI</label>
+            <input [(ngModel)]="user.carnet_CUI" name="carnet_CUI" #carnet_CUI="ngModel" type="text" class="form-control" required/>            
+            <span *ngIf="!carnet_CUI.valid && carnet_CUI.touched" class="alert alert-danger" role="alert">
+                El carnet o el CUI es obligatorio
+            </span>
+        </p>
+        <button type="submit"class="btn btn-primary" style="cursor:pointer" [disabled]="!deleteUserForm.form.valid" >{{title}}</button>
+    </form>
+    </div>

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background:white;
+}
+title{
+    color: black;
+}
+.navbar-toggle {
+    padding: 14px 10px;
+    border-radius: 50%;
+}

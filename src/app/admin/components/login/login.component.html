@@ -1,0 +1,17 @@
+
+<h1>{{title}}</h1>
+<div class="col-lg-4">
+    <form (ngSubmit)="onSubmit()" #loginUserForm="ngForm" >       
+        <p>
+            <label>Usuario</label>
+            <input [(ngModel)]="user.usuario" name="usuario" type="text" class="form-control" required>
+        </p>               
+        <p>
+            <label>Contraseña</label>
+            <input [(ngModel)]="user.password" name="password" type="password" class="form-control" required>
+        </p>
+        <button type="submit"class="btn btn-primary" style="cursor:pointer" [disabled]="!loginUserForm.form.valid" [routerLink]="['/admin-panel/']">{{title}}</button>
+    </form>
+    </div>
+    
+    
